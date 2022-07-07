@@ -1,2 +1,2 @@
 # GraphAlgorithms
-This is a repo for my practice graph problems
+This is a repo for me to practice graph problems
