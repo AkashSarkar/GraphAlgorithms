@@ -16,7 +16,7 @@ let graph = {
  * treat array as stack by using push(), pop()
  */
 
-const depthFirstPrint = (graph, source) => {
+const depthFirstIterativePrint = (graph, source) => {
   const stack = [source];
   while (stack.length > 0) {
     const current = stack.pop();
@@ -30,4 +30,18 @@ const depthFirstPrint = (graph, source) => {
   }
 };
 
-depthFirstPrint(graph, "a");
+// depthFirstIterativePrint(graph, "a");
+
+/**
+ * recursive approach
+ */
+
+const depthFirstRecursivePrint = (graph, source) => {
+  console.log(source);
+  const neighbors = graph[source];
+  for (let neighbor of neighbors) {
+    depthFirstRecursivePrint(graph, neighbor);
+  }
+};
+
+depthFirstRecursivePrint(graph, "a");
